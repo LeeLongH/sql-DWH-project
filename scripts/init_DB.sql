@@ -7,22 +7,22 @@ inhere
 
 
 USE master;
-GO;
+GO
 
 -- drop and recreate the 'DataWarehouse' DB
-IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'DataWareHouse';
+IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'DataWareHouse')
 BEGIN
 	ALTER DATABASE DataWarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
 	DROP DATABASE DataWarehouse;
 END;
-GO;
+GO
 
 -- create the 'DataWarehouse' DB
 CREATE DATABASE DataWarehouse;
-GO;
+GO
 
 USE DataWarehouse;
-GO;
+GO
 
 -- Create Schemas
 CREATE SCHEMA bronze;
